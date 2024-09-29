@@ -39,3 +39,13 @@ jobs:
       - name: Push DB Service Docker image
         run: docker push ghcr.io/${{ github.repository }}/db-service:latest
 
+      # Step 7: Start with ui service image
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      # Step 4: Build the Docker image
+      - name: Build UI Service Docker image
+        run: docker build -t ghcr.io/${{ github.repository }}/ui-service:latest ./ui-service
+      # Step 5: Push the Docker image
+      - name: Push UI Service Docker image
+        run: docker push ghcr.io/${{ github.repository }}/ui-service:latest
