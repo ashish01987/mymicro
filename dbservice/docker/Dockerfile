@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the Python app from the parent directory of docker/ (db_service.py)
-COPY ../db_service.py /app/
+COPY ../../dbservice/db_service.py /app/
 
 # Optionally copy the requirements.txt if it exists and install dependencies
 # COPY ../requirements.txt /app/
