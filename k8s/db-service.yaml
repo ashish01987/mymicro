@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dbservice
+  template:
+    metadata:
+      labels:
+        app: dbservice
+    spec:
+      containers:
+      - name: dbservice
+        image: ghcr.io/ashish01987/mymicro/db-service:latest
+        ports:
+        - containerPort: 5001
+
