@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the message from the HelloWorld Service
-    fetch('http://localhost:5000/api/helloworld')  // Update the URL if necessary
+    fetch('http://helloworld-service:80/api/helloworld')  // Update the URL if necessary
       .then(response => response.json())
       .then(data => setMessage(data.message))
       .catch(error => setMessage('Error fetching message'));
