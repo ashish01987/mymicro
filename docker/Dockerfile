@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get install -y python3 python3-pip
 
 # Copy the application files from your local system to the /app directory inside the container
-COPY ../app /app
+COPY ./app /app
 
 # Install Python dependencies (Flask)
 RUN pip3 install Flask
