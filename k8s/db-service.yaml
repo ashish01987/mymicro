@@ -17,4 +17,6 @@ spec:
         image: ghcr.io/ashish01987/mymicro/db-service:latest
         ports:
         - containerPort: 5001
+      imagePullSecrets:
+      - name: ghcr-secret-1
 
