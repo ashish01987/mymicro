@@ -20,7 +20,7 @@ jobs:
 
       # Step 3: Build Docker image for HelloWorld Service
       - name: Build HelloWorld Service Docker image
-        run: docker build -t ghcr.io/${{ github.repository }}/helloworld-service:latest -f docker/Dockerfile
+        run: docker build -t ghcr.io/${{ github.repository }}/helloworld-service:latest -f docker/Dockerfile .
 
       # Step 4: Push HelloWorld Service Docker image to GitHub Packages
       - name: Push HelloWorld Service Docker image
