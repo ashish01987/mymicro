@@ -13,7 +13,7 @@ This project demonstrates a simple microservices architecture, incorporating bes
 
 The high-level architecture of the system:
 
-![Architecture Diagram](./docs/architecture/architecture-diagram.png)
+![Architecture Diagram](simpleservice.drawio.svg)
 
 ### Core Microservices
 1. **UI Service**: A client-facing frontend service that calls the HelloWorld API.
